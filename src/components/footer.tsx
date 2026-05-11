@@ -1,118 +1,103 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Link from "next/link";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTiktok,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-black/5 bg-[#f5f3ee] py-14 lg:py-16">
-      {/* Glow */}
-      <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-yellow-400/10 blur-3xl" />
-
-      <div className="container-premium relative z-10">
-        <div className="grid gap-12 lg:grid-cols-4">
-          {/* BRAND */}
-          <div className="lg:col-span-2">
-            <motion.h3
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45 }}
-              viewport={{ once: true }}
-              className="text-3xl font-black tracking-tight text-slate-900"
-            >
+    <>
+      <footer className="w-full border-t border-black/10 bg-[#f5f1e8]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-14 md:flex-row md:items-center md:justify-between">
+          {/* LEFT */}
+          <div className="space-y-4">
+            <h2 className="text-2xl font-black tracking-tight text-[#0b172a]">
               Carlos Torres
-            </motion.h3>
+            </h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55 }}
-              viewport={{ once: true }}
-              className="mt-5 max-w-md text-base leading-relaxed text-slate-600"
+            <p className="max-w-md text-sm leading-7 text-[#334155]">
+              Consultoría estratégica en inteligencia artificial,
+              automatización y transformación digital para empresas modernas.
+            </p>
+          </div>
+
+          {/* SOCIALS */}
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              href="https://facebook.com/marketerosperuweb/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white text-[#0b172a] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b172a] hover:text-white"
             >
-              Consultoría especializada en automatización, inteligencia
-              artificial y soluciones digitales modernas para empresas que
-              buscan crecer.
-            </motion.p>
-          </div>
+              <FaFacebookF size={18} />
+            </Link>
 
-          {/* LINKS */}
-          <div>
-            <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-slate-900">
-              Navegación
-            </h4>
+            <Link
+              href="https://instagram.com/froilan_vega_sanchez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white text-[#0b172a] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b172a] hover:text-white"
+            >
+              <FaInstagram size={18} />
+            </Link>
 
-            <ul className="mt-5 space-y-4">
-              <li>
-                <a
-                  href="#services"
-                  className="text-slate-600 transition-colors duration-300 hover:text-slate-950"
-                >
-                  Servicios
-                </a>
-              </li>
+            <Link
+              href="https://tiktok.com/@alejandrovega9683"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white text-[#0b172a] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b172a] hover:text-white"
+            >
+              <FaTiktok size={18} />
+            </Link>
 
-              <li>
-                <a
-                  href="#about"
-                  className="text-slate-600 transition-colors duration-300 hover:text-slate-950"
-                >
-                  Nosotros
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#testimonials"
-                  className="text-slate-600 transition-colors duration-300 hover:text-slate-950"
-                >
-                  Resultados
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#contact"
-                  className="text-slate-600 transition-colors duration-300 hover:text-slate-950"
-                >
-                  Contacto
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* CONTACT */}
-          <div>
-            <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-slate-900">
-              Contacto
-            </h4>
-
-            <div className="mt-5 space-y-4">
-              <p className="text-slate-600">
-                contacto@consultoriaia.com
-              </p>
-
-              <p className="text-slate-600">
-                Lima, Perú
-              </p>
-
-              <div className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-2 text-xs font-medium text-emerald-700">
-                Disponible para proyectos
-              </div>
-            </div>
+            <Link
+              href="https://linkedin.com/in/alejandro-vega-sanchez-507125289"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white text-[#0b172a] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b172a] hover:text-white"
+            >
+              <FaLinkedinIn size={18} />
+            </Link>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-14 flex flex-col gap-4 border-t border-black/5 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © 2026 Carlos Torres. Todos los derechos reservados.
-          </p>
-
-          <p>
-            Diseñado con enfoque premium y automatización inteligente.
+        {/* COPYRIGHT */}
+        <div className="border-t border-black/10 py-6">
+          <p className="text-center text-sm text-[#64748b]">
+            © 2026 Carlos Torres Consulting. Todos los derechos reservados.
           </p>
         </div>
+      </footer>
+
+      {/* WHATSAPP PREMIUM FLOAT */}
+      <div className="fixed bottom-6 right-6 z-[9999] flex items-center gap-3">
+        {/* MESSAGE */}
+        <div className="hidden rounded-2xl bg-white px-4 py-3 shadow-2xl md:block">
+          <p className="text-sm leading-none text-black">
+            ¿Dudas o consultas?
+          </p>
+
+          <p className="mt-1 text-sm font-bold leading-none text-black">
+            Chatea con nosotros
+          </p>
+        </div>
+
+        {/* BUTTON */}
+        <Link
+          href="https://wa.me/51912094171"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp"
+          className="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-all duration-300 hover:scale-110"
+        >
+          <FaWhatsapp size={30} />
+        </Link>
       </div>
-    </footer>
+    </>
   );
 }
