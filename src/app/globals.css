@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f3ee;
+  --foreground: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+
+  color: var(--foreground);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  overflow-x: hidden;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* PREMIUM CONTAINER */
+.container-premium {
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin-inline: auto;
+
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container-premium {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-premium {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* PREMIUM SELECTION */
+::selection {
+  background: rgba(250, 204, 21, 0.25);
+
+  color: #020617;
+}
+
+/* PREMIUM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ece8df;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.25);
+
+  border-radius: 999px;
+
+  border: 2px solid #ece8df;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+/* PREMIUM ANIMATIONS */
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* PREMIUM SHADOW */
+.shadow-premium {
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* PREMIUM GLASS */
+.glass-premium {
+  background: rgba(255, 255, 255, 0.72);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* IMAGE OPTIMIZATION */
+img {
+  user-select: none;
+
+  -webkit-user-drag: none;
+}
+
+/* BETTER TAP MOBILE */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* IMPROVED INPUTS */
+input,
+textarea,
+button {
+  font: inherit;
+}
